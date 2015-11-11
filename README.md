@@ -14,4 +14,4 @@ Matt Beal, Lucy Boone, Ben Fallon, Nicole Tolch
 If you find bugs or want to contribute, please submit a pull request describing your changes.
 
 ## Acknowledgements
-Written for Mike and Jean.
+Written for Mike and Gene.
