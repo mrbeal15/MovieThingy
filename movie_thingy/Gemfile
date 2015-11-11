@@ -41,6 +41,9 @@ group :development, :test do
 
   # Test how many/which lines are hit when testing
   gem 'simplecov', require: false
+
+  gem 'capybara'
+  gem 'factory_girl'
 end
 
 group :development do
