@@ -8,7 +8,18 @@
 </head>
 <body>
 
-<%= yield %>
+	<!-- if @user && session[:user_id] -->
+	<div class="login-options">
+<!-- 		link_to "Sign In", login_path %> | 
+		link_to "Sign Up", signup_path %> -->		
+ <a href="#">Sign In</a> | <a href="#">Sign Up</a>
+	</div>
+
+	<div class="navbar">
+		<a href="#">ALL MOVIES</a> | <a href="#">ALL REVIEWS</a>
+	</div>
+
+	<%= yield %>
 
 </body>
 </html>
