@@ -2,7 +2,7 @@
 Phase 3 - Client Project
 
 ## Purpose
-This project was conceived to create an elegant website for publishing movie reviews. It allows a user to publish a review, and will allow other users to rate said review. Upon a high enough rating, the review will be moved to the top of the page. Once a reviewer has enough points, all reviews they right will be placed in the higher part of the page.
+This project was conceived to create an elegant website for publishing movie reviews. It allows a user to publish a review, and will allow other users to rate said review. Upon receiving enough ratings of at least 4 or higher, reviews will be eligible for display in the 'Featured Reviews' section. Reviews for each movie will be displayed in desceneding order, with the reviews having the higheset accumulative rating at the top.
 
 ## License
 Read License
