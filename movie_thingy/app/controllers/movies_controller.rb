@@ -1,4 +1,4 @@
-class PagesController < ApplicationController
+class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all
@@ -13,6 +13,7 @@ class PagesController < ApplicationController
 
 	def create
     @movie = Movie.create( movie_params )
+    redirect_to '/'
   end
 
   private
