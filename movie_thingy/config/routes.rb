@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
   MovieThingy::Application.routes.draw do
-    resources :movies
+    
+    resources :movies do
+      resources :reviews
+    end
 
     get '/' => 'pages#index'
 
