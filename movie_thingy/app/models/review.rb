@@ -3,6 +3,7 @@ class Review < ActiveRecord::Base
   belongs_to :user
   has_many :ratings, :as => :rateable
   has_many :comments
+
   has_attached_file :photo_1,
     :styles => { :medium => "300x300>" },
     :storage => :fog,
@@ -63,4 +64,5 @@ class Review < ActiveRecord::Base
       validates_attachment_content_type :photo_3, content_type: /\Aimage\/.*\Z/
       validates_attachment_content_type :photo_4, content_type: /\Aimage\/.*\Z/
       validates_attachment_content_type :photo_5, content_type: /\Aimage\/.*\Z/
+
 end
