@@ -14,3 +14,11 @@
 
 # Ignore some testing results
 coverage
+
+# Ignore Amazon credentials
+aws.yml
+s3.yml
+
+/public/images/moviethingphase3project
+
+/db/schema.rb

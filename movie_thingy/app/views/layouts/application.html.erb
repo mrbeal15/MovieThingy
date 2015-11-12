@@ -13,13 +13,21 @@
 <!-- 		link_to "Sign In", login_path %> |
 		link_to "Sign Up", signup_path %> -->
  <a href="#">Sign In</a> | <a href="#">Sign Up</a>
+	<div class="topbar"></div>
+	<div id="login-options">
+<!-- 		link_to "Sign In", login_path %> |
+		link_to "Sign Up", signup_path %> -->
+ <a href="/login">Sign In</a> | <a href="/signup">Sign Up</a>
 	</div>
+
+	<div id="site-name">Site Name</div>
 
 	<div class="navbar">
-		<a href="#">ALL MOVIES</a> | <a href="#">ALL REVIEWS</a>
+		<a href="#">ALL MOVIES </a> | <a href="#"> ALL REVIEWS</a>
 	</div>
+	<div id="navbar-line"></div>
 
 	<%= yield %>
-
+	<div id="bottombar"></div>
 </body>
 </html>

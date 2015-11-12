@@ -1,0 +1,7 @@
+<% @movies.each do |mov|  %>
+  <h1> <%= mov.title %> </h1>
+  <h2> by: <%= mov.director %> </h2>
+  <h4> <%= mov.release_year %>, <%= mov.mppa_rating %>, <%= mov.runtime %> mins. </h4>
+  <p> <%= mov.cast %> </p>
+  <p> <%= image_tag mov.title_photo.url(:small) %>
+<% end  %>
