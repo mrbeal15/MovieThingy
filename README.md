@@ -13,5 +13,16 @@ Matt Beal, Lucy Boone, Ben Fallon, Nicole Tolch
 ## Bugs
 If you find bugs or want to contribute, please submit a pull request describing your changes.
 
+## Dependencies
+For paperclip to work, you need to have imagemagick installed. To do so,
+
+```
+brew install imagemagick
+```
+and
+```
+brew install gs
+```
+
 ## Acknowledgements
-Written for Mike and Jean.
+Written for Mike and Gene.
