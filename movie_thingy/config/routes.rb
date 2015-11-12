@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
 
   MovieThingy::Application.routes.draw do
-    resources :movies
+    
+    resources :movies do
+      resources :reviews
+    end
 
     get '/' => 'pages#index'
+
+    get '/signup' => 'users#new'
+    post '/signup' => 'users#create'
 
     get '/login' => 'sessions#new'
     post '/login' => 'sessions#create'
