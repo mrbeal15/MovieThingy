@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+	padding-top: 90px;
+	padding: 60px;
+	/*background-color: #141311;*/
+}
+
+a {
+}
+
+#login-options {
+	float: right;
+	background-color: white;
+	color: #141311;
+	padding: 22px;
+}
+
+.navbar {
+	background-color: white;
+	color: #141311;
+	padding: 22px;
+	position: absolute;
+	display: block;
+}
+
+#login-options a{
+	text-decoration: none;
+	color: #141311;
+}
+
+.navbar a{
+	text-decoration: none;
+	position: relative;
+	clear: both;
+	color: #141311;
+}
