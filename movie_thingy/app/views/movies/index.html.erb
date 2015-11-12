@@ -3,5 +3,5 @@
   <h2> by: <%= mov.director %> </h2>
   <h4> <%= mov.release_year %>, <%= mov.mppa_rating %>, <%= mov.runtime %> mins. </h4>
   <p> <%= mov.cast %> </p>
-  <p> <%= image_tag mov.title_photo.url %>
+  <p> <%= image_tag mov.title_photo.url(:small) %>
 <% end  %>
