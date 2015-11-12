@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   MovieThingy::Application.routes.draw do
+    resources :movies
+
     get '/' => 'pages#index'
 
     get '/login' => 'sessions#new'
