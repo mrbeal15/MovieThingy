@@ -25,4 +25,4 @@ brew install gs
 ```
 
 ## Acknowledgements
-Written for Mike and Jean.
+Written for Mike and Gene.
