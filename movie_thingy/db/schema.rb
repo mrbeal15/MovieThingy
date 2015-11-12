@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112155316) do
+ActiveRecord::Schema.define(version: 20151112202734) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,8 +68,28 @@ ActiveRecord::Schema.define(version: 20151112155316) do
     t.integer  "cast"
     t.integer  "score"
     t.integer  "overall_effect"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "photo_1_file_name"
+    t.string   "photo_1_content_type"
+    t.integer  "photo_1_file_size"
+    t.datetime "photo_1_updated_at"
+    t.string   "photo_2_file_name"
+    t.string   "photo_2_content_type"
+    t.integer  "photo_2_file_size"
+    t.datetime "photo_2_updated_at"
+    t.string   "photo_3_file_name"
+    t.string   "photo_3_content_type"
+    t.integer  "photo_3_file_size"
+    t.datetime "photo_3_updated_at"
+    t.string   "photo_4_file_name"
+    t.string   "photo_4_content_type"
+    t.integer  "photo_4_file_size"
+    t.datetime "photo_4_updated_at"
+    t.string   "photo_5_file_name"
+    t.string   "photo_5_content_type"
+    t.integer  "photo_5_file_size"
+    t.datetime "photo_5_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
