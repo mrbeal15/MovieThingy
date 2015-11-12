@@ -4,6 +4,11 @@ Rails.application.routes.draw do
     resources :movies
 
     get '/' => 'pages#index'
+
+    get '/login' => 'sessions#new'
+    post '/login' => 'sessions#create'
+
+    delete '/logout' => 'sessions#destroy'
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

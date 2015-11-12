@@ -1,0 +1,14 @@
+<div class="login-container">
+	<h3>Log In</h3>
+
+  <%= @error if @error %>
+
+  <%= form_tag "/login" do %>
+    <p>Email </p>
+    <input type="email" name="email">
+    <p>Password </p>
+    <input type="password" name="password">
+    <p><input type="submit" value="Log in">
+  <% end %>
+
+</div>
