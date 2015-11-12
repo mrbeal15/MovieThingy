@@ -8,14 +8,23 @@
 </head>
 <body>
 
-	<!-- if @user && session[:user_id] -->
-
 	<div class="topbar"></div>
-
+	
 	<div id="login-options">
-<!-- 		link_to "Sign In", login_path %> |
-		link_to "Sign Up", signup_path %> -->
- <a href="/login">Sign In</a> | <a href="/signup">Sign Up</a>
+
+		<% if @user && session[:current_user_id] %>
+		<!-- 		link_to "Sign In", login_path %> |
+				link_to "Sign Up", signup_path %> -->
+
+			Welcome, <%= @user.username %>! | 
+			<!-- <a href="/logout">Logout</a> -->
+			<%= link_to "Logout", logout_path %>
+
+		<% else %>
+		  <a href="/login">Sign In</a> | 
+		  <a href="/signup">Sign Up</a>
+
+		<% end %>
 	</div>
 
 	<div id="site-name"><a href="/">Stardust Reviews</a></div>
