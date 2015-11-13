@@ -5,7 +5,30 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <style></style>
 </head>
+<<<<<<< HEAD
+<body>
+
+	<!-- if @user && session[:user_id] -->
+<nav>
+ <div class="nav-wrapper">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+       <li> <a href="/login">Sign In</a> </li>
+       <li> <a href="/signup">Sign Up</a></li>
+       <li><a href="/movies">ALL MOVIES </a>
+       </li> <li><a href="#"> ALL REVIEWS</a></li>
+      </ul>
+  </div>
+ </nav>
+  <div class="container">
+    <div class="row"><a href="/" class="col s12 black-text center"><h4>Stardust Reviews</h4></a></div>
+  </div>
+
+
+  <%= yield %>
+	<footer class="page-footer"></footer>
+=======
 <body class="page-wrapper">
 
 	<div class="topbar"></div>
@@ -35,5 +58,6 @@
 
 	<%= yield %>
 	<div id="bottombar"></div>
+>>>>>>> origin/master
 </body>
 </html>
