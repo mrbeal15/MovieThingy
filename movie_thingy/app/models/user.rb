@@ -12,8 +12,11 @@ class User < ActiveRecord::Base
     end
     if sum = 0
       return "Currently has no rated reviews"
+    elsif
+      sum / self.reviews.ratings.count >= 4
+      self.trusted_user = true
     else
-      return sum / self.reviews.ratings.count
+      false
     end
   end
 end
