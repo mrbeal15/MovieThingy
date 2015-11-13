@@ -1,32 +1,36 @@
-<h1> <%= @review.title %> </h1>
-<h3> <%= @review.movie.title %> </h3>
-  <% user = User.find(@review.user_id) %>
-<h4> By <%= user.username %></h4>
+<div class="container">
+	
+	<h1> <%= @review.title %> </h1>
+	<h3> <%= @review.movie.title %> </h3>
+	  <% user = User.find(@review.user_id) %>
+	<h4> By <%= user.username %></h4>
 
-<p> <%= @review.content %> </p>
+	<p> <%= @review.content %> </p>
 
-<p> What did you think of this? </p>
-<%= render 'rating' %>
+	<p> What did you think of this? </p>
+	<%= render 'rating' %>
 
 
-<p> <% if @review.photo_1.file? %>
-    <%= image_tag @review.photo_1.url(:medium) %>
-  <% end %>
-<% if @review.photo_2.file? %>
-  <%= image_tag @review.photo_2.url(:medium) %>
-<% end %>
-<% if @review.photo_3.file? %>
-  <%= image_tag @review.photo_3.url(:medium) %>
-<% end %>
-<% if @review.photo_4.file? %>
-  <%= image_tag @review.photo_4.url(:medium) %>
-<% end %>
-<% if @review.photo_5.file? %>
-  <%= image_tag @review.photo_5.url(:medium) %>
-<% end %></p>
+	<p> <% if @review.photo_1.file? %>
+	    <%= image_tag @review.photo_1.url(:medium) %>
+	  <% end %>
+	<% if @review.photo_2.file? %>
+	  <%= image_tag @review.photo_2.url(:medium) %>
+	<% end %>
+	<% if @review.photo_3.file? %>
+	  <%= image_tag @review.photo_3.url(:medium) %>
+	<% end %>
+	<% if @review.photo_4.file? %>
+	  <%= image_tag @review.photo_4.url(:medium) %>
+	<% end %>
+	<% if @review.photo_5.file? %>
+	  <%= image_tag @review.photo_5.url(:medium) %>
+	<% end %></p>
 
-<%= form_tag("", method: "post") do %>
-  <%= label_tag(:comment, "Content") %>
-  <%= text_field_tag(:comment) %>
-<%= submit_tag("Leave Comment") %>
-<% end %>
+	<%= form_tag("", method: "post") do %>
+	  <%= label_tag(:comment, "Content") %>
+	  <%= text_field_tag(:comment) %>
+		<%= submit_tag("Leave Comment") %>
+	<% end %>
+
+</div>
