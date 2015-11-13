@@ -16,4 +16,3 @@
 //= require materialize/extras/nouislider
 //= require_tree .
 
-
