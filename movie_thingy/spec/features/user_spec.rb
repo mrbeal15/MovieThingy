@@ -45,3 +45,14 @@ feature "User logging in" do
     expect(page).to have_content 'Invalid credentials'
   end
 end
+
+feature "User logging out" do
+  scenario "User can logout" do
+    visit '/login'
+    fill_in 'email', with: 'bnfallon@yahoo.com'
+    fill_in 'password', with: 'password'
+    click_button 'Log in'
+    click_link 'Logout'
+    expect(page).to have_content 'Sign In | Sign Up'
+  end
+end
