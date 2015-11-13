@@ -6,9 +6,20 @@ RSpec.describe MoviesController, type: :controller do
 
   describe 'Get #index' do
     it "assigns all movies as @movies" do
-      get :movies
+      get :index
       expect(assigns(:movies)).to eq(Movie.all)
     end
+  end
+
+  describe 'GET #show' do
+    it "assigns the requested movie as @movie" do
+      get :show, { id: movie_1.to_param }
+      expect(assigns(:movie)).to eq(movie_1)
+    end
+  end
+
+  describe 'GET #new' do
+    it 'renders the a new form'
   end
 
 
