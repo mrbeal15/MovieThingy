@@ -9,4 +9,5 @@ module ApplicationHelper
     session[:current_user_id] != nil
   end
 
+
 end

@@ -29,7 +29,7 @@ class ReviewsController < ApplicationController
 
   def destroy
     @post.destory
-    redirect to root_path
+    redirect_to root_path
   end
 
   private
