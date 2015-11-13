@@ -6,16 +6,15 @@ class Review < ActiveRecord::Base
 
 
   def review_average_rating
-    # user = User.find_by(id: :user_id)
-    # user_reviews = current_user.reviews
     sum = []
-    user = self.user
-    user.reviews.last.ratings.each do |rate|
+    self.ratings.each do |rate|
       sum << rate.rating
     end
-    total = sum.reduce(:+)
-    average = total / sum.length
-    return average
+    if sum.length == 0
+      return 0
+    else
+      return (sum.reduce(:+)) / sum.length
+    end
   end
 
   has_attached_file :photo_1,
@@ -78,6 +77,5 @@ class Review < ActiveRecord::Base
       validates_attachment_content_type :photo_3, content_type: /\Aimage\/.*\Z/
       validates_attachment_content_type :photo_4, content_type: /\Aimage\/.*\Z/
       validates_attachment_content_type :photo_5, content_type: /\Aimage\/.*\Z/
->>>>>>> 31e59dbc4283be0a7f9d8d81c0041bcfd5604fe6
 
 end
