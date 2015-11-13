@@ -9,6 +9,7 @@ class Review < ActiveRecord::Base
     self.ratings.each do |rate|
       sum << rate.rating
     end
+
     if sum.length == 0
       return 0
     else
