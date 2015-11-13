@@ -7,18 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="topbar"></div>
+
 	<!-- if @user && session[:user_id] -->
+
+	<div class="topbar"></div>
+
 	<div id="login-options">
-<!-- 		link_to "Sign In", login_path %> | 
-		link_to "Sign Up", signup_path %> -->		
- <a href="#">Sign In</a> | <a href="#">Sign Up</a>
+<!-- 		link_to "Sign In", login_path %> |
+		link_to "Sign Up", signup_path %> -->
+ <a href="/login">Sign In</a> | <a href="/signup">Sign Up</a>
 	</div>
 
-	<div id="site-name">Site Name</div>
+	<div id="site-name"><a href="/">Stardust Reviews</a></div>
 
 	<div class="navbar">
-		<a href="#">ALL MOVIES </a> | <a href="#"> ALL REVIEWS</a>
+		<a href="/movies">ALL MOVIES </a> | <a href="#"> ALL REVIEWS</a>
 	</div>
 	<div id="navbar-line"></div>
 

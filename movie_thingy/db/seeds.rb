@@ -5,3 +5,23 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+10.times{ User.create(
+                      username: Faker::Name.first_name,
+                      email: Faker::Internet.email,
+                      password: Faker::Lorem.words(1),
+                      bio: Faker::Lorem.paragraph,
+                     )}
+
+Genre.create(name: "Action")
+Genre.create(name: "Comedy")
+Genre.create(name: "Drama")
+Genre.create(name: "Family")
+Genre.create(name: "Horror")
+Genre.create(name: "Musical")
+Genre.create(name: "Noir")
+Genre.create(name: "Romance")
+Genre.create(name: "Science Fiction")
+Genre.create(name: "Thriller")
+
+

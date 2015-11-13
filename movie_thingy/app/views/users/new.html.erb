@@ -1,0 +1,19 @@
+<div class="login-container">
+	<h3>Register</h3>
+
+  <%= @error if @error %>
+
+
+
+  <%= form_tag "/signup", method: "post" do %>
+
+  	<p>Username 
+    <input type="text" name="user[username]"></p>
+    <p>Email 
+    <input type="text" name="user[email]"></p>
+    <p>Password 
+    <input type="password" name="user[password]"></p>
+    <p><input type="submit" value="Create Account">
+  <% end %>
+
+</div>

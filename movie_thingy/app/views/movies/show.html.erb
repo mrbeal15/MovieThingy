@@ -1,0 +1,10 @@
+<h1> <%= @movie.title %> </h1>
+<h2> Directed by: <%= @movie.director %> </h2>
+<h4> <%= @movie.release_year %>, <%= @movie.mppa_rating %>, <%= @movie.runtime %> mins. </h4>
+<p> Cast: <%= @movie.cast %> </p>
+<p> <%= image_tag @movie.title_photo.url(:small) %>
+
+<% @movie.reviews.each do |rev| %>
+  <h3><a href="/movies/<%=@movie.id%>/reviews/<%= rev.id %>"><%= rev.title %></a></h3>
+
+<% end %>
