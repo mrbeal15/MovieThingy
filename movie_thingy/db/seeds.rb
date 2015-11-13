@@ -201,6 +201,7 @@ Movie.create(
   title_photo_content_type: nil,
   title_photo_file_size: nil,
   title_photo_updated_at: nil
+)
 
 Movie.create(
 genre_id: 2,
@@ -370,4 +371,3 @@ Movie.create(
  title_photo_file_size: nil,
  title_photo_updated_at: nil
 )
-
