@@ -16,6 +16,8 @@ class PagesController < ApplicationController
 				avg = total/m.reviews.count
 				m.avg_score = avg
 			end
+		end
+
 		@top_movies = @movies.order('avg_score desc')[0..2]
 	end
 
