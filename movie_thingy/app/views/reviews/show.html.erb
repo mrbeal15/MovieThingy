@@ -1,0 +1,14 @@
+<h1> <%= @review.title %> </h1>
+<h3> <%= @review.movie.title %> </h3>
+<h4> By <%= @review.user_id %></h4>
+
+<p> <%= @review.content %> </p>
+
+<p> What did you think of this? </p>
+<%= render 'rating' %>
+
+<p> <%= image_tag @review.photo_1.url(:small) %>
+ <%= image_tag @review.photo_2.url(:small) %>
+ <%= image_tag @review.photo_3.url(:small) %>
+ <%= image_tag @review.photo_4.url(:small) %>
+ <%= image_tag @review.photo_5.url(:small) %> </p>
