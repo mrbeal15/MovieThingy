@@ -19,7 +19,7 @@
 <div class="top-reviews container row">
 	<% @top_reviews.each do |rev| %>
 		
-		<div class="indiv-top-review col s6">
+		<div class="indiv-top-review col s4">
 			<div class="top-review-movie-title">
 				<a href="/movies/<%= rev.movie.id %>"><%= rev.movie.title %></a>
 			</div>
