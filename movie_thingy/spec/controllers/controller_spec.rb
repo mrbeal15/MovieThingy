@@ -25,5 +25,22 @@ RSpec.describe MoviesController, type: :controller do
     end
   end
 
+  describe 'POST #create' do
+    context "when valid params are passed" do
+
+      it 'creates a new movie' do
+        expect{
+          post :create, movie: {title: "Skyfall", director: "Sam Mendes", release_year: 2012, runtime: 143, mppa_rating: "PG13", cast: "Daniel Craig, Javier Bardem, Ralph Fiennes, Judi Dench"}
+        }.to change(Movie, :count).by(1)
+      end
+
+      it 'redirects to the movie page after creation' do
+        expect(
+          post :create, movie: {title: "Skyfall", director: "Sam Mendes", release_year: 2012, runtime: 143, mppa_rating: "PG13", cast: "Daniel Craig, Javier Bardem, Ralph Fiennes, Judi Dench"
+        }).to redirect_to("/movies/#{assigns(:movie).id}")
+      end
+    end
+  end
+
 
 end
