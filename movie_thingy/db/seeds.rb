@@ -34,5 +34,4 @@ Genre.create(name: "Thriller")
                       cast: rand(1..5),
                       score: rand(1..5),
                       overall_effect: rand(1..5)
-                     )}
-Movie.create()
+                     )}git 
