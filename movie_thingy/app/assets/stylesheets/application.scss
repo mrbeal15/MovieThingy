@@ -1,0 +1,11 @@
+@import "materialize/components/color";
+$primary-color: color("grey", "darken-4") !default;
+@import 'materialize';
+
+  html {
+    font-family: Poiret One, serif;
+  }
+
+.indicator-item.active{
+background-color: #212121;
+}
