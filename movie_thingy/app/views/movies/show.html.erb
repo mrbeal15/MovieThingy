@@ -1,5 +1,5 @@
 
-<div class="movie-container">
+<div class="container">
 
   <h1 class="movie-title"> <%= @movie.title %> </h1>
   <p class="movie-title-large"> <%= image_tag @movie.title_photo.url(:large) %> </p>
@@ -21,11 +21,11 @@
 	  		<h3><a href="/movies/<%=@movie.id%>/reviews/<%= rev.id %>"><%= rev.title %></a></h3>
 	  		<ul><%= rev.user.username %> says: </ul>
 	  		<ul><%= rev.content %></ul>
-	  		<ul> Score: <%= rev.score %></ul>
 	  		<ul> Photography: <%= rev.photography %></ul>
 	  		<ul> Directing: <%= rev.directing %></ul>
 	  		<ul> Cast: <%= rev.cast %></ul>
-	  		<ul> Overall Effect: <%= rev.overall_effect %></ul>
+	  		<ul> Score: <%= rev.score %></ul>
+	  		<ul> Overall Effect: <%= rev.overall_effect %></ul><hr>
 	  	</p>
 	  <% end %>
 	<% else %>
