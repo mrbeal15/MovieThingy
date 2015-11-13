@@ -21,6 +21,7 @@ Genre.create(name: "Horror")
 Genre.create(name: "Musical")
 Genre.create(name: "Noir")
 Genre.create(name: "Romance")
+Genre.create(name: "Romantic Comedy")
 Genre.create(name: "Science Fiction")
 Genre.create(name: "Thriller")
 
