@@ -4,7 +4,8 @@ class Movie < ActiveRecord::Base
   has_many :ratings, :as => :rateable
 
   has_attached_file :title_photo,
-    :styles => { :small => "100x100>" },
+    :styles => { :small => "100x100>", 
+                 :large => "600x600>" },
     :storage => :fog,
     :fog_credentials => {
       # aws_access_key_id: "AKIAI5QTS4LK2N622FOA",
