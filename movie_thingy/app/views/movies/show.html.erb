@@ -11,7 +11,7 @@
 
   <p>
 		<% if logged_in? %>
-		  <a href="/movies/<%= @movie.id %>/reviews/new">Create a new review for this film </a>
+		  <h5><a href="/movies/<%= @movie.id %>/reviews/new">Create a new review for this film </a></h5>
 		<% end %>
   </p>
 
@@ -25,8 +25,9 @@
 	  		<ul> Directing: <%= rev.directing %></ul>
 	  		<ul> Cast: <%= rev.cast %></ul>
 	  		<ul> Score: <%= rev.score %></ul>
-	  		<ul> Overall Effect: <%= rev.overall_effect %></ul><hr>
+	  		<ul> Overall Effect: <%= rev.overall_effect %></ul>
 	  	</p>
+	  	<p><a href="/movies/<%= rev.movie.id %>/reviews/<%= rev.id %>">Rate This Review</a><hr>
 	  <% end %>
 	<% else %>
 		<h3>Be the first to reivew!</h3>

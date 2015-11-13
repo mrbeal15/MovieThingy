@@ -1,8 +1,11 @@
+<div class="container">
+
 <h1>Reviews</h1>
 
 <% @reviews.each do |rev| %>
-  <h3><a href="/movies/<%= rev.movie_id %>/reviews/<%= rev.id %>"><%= rev.title %></a></h3>
-  <p> <%= rev.content %> </p>
+  <h4><a href="/movies/<%= rev.movie_id %>"><%= rev.movie.title %></a></h4>
+  <p style="font-weight:bold"> <%= rev.content %> </p>
+  <p> <%= image_tag rev.photo_1.url(:medium) %> </p>
   <table>
     <tr>
       <th>Photography</th>
@@ -23,6 +26,8 @@
       <td><%= rev.user.trusted? %>
   </table>
 
-  <p> <%= image_tag rev.photo_1.url(:medium) %> </p>
+  <p><a href="/movies/<%= rev.movie.id %>/reviews/<%= rev.id %>">Rate This Review</a></p><hr>
 
 <% end %>
+
+</div>
