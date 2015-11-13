@@ -19,3 +19,29 @@ feature "User signing up" do
   end
 
 end
+
+feature "User logging in" do
+  User.create(username: 'Salt7800', email: 'bnfallon@yahoo.com', password: 'password')
+
+  scenario "User can find login page" do
+    visit '/'
+    click_link('Sign In')
+    expect(page).to have_content 'Log In'
+  end
+
+  scenario "User can log in" do
+    visit '/login'
+    fill_in 'email', with: 'bnfallon@yahoo.com'
+    fill_in 'password', with: 'password'
+    click_button 'Log in'
+    expect(page).to have_content 'Salt7800'
+  end
+
+  scenario "Can't login with invalid credentials" do
+    visit '/login'
+    fill_in 'email', with: 'Hi!'
+    fill_in 'password', with: 'password'
+    click_button 'Log in'
+    expect(page).to have_content 'Invalid credentials'
+  end
+end
