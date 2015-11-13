@@ -19,7 +19,10 @@ RSpec.describe MoviesController, type: :controller do
   end
 
   describe 'GET #new' do
-    it 'renders the a new form'
+    it 'renders the a new form' do
+      get :new
+      expect(response).to render_template :new
+    end
   end
 
 
