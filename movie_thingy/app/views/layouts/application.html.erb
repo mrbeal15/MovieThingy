@@ -7,14 +7,13 @@
   <%= csrf_meta_tags %>
   <style></style>
 </head>
-<<<<<<< HEAD
 <body>
 
 	<!-- if @user && session[:user_id] -->
 <nav>
  <div class="nav-wrapper">
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-       <li> <a href="/login">Sign In</a> </li>
+       <li><a href="/login">Sign In</a> </li>
        <li> <a href="/signup">Sign Up</a></li>
        <li><a href="/movies">ALL MOVIES </a>
        </li> <li><a href="#"> ALL REVIEWS</a></li>
@@ -28,36 +27,6 @@
 
   <%= yield %>
 	<footer class="page-footer"></footer>
-=======
-<body class="page-wrapper">
 
-	<div class="topbar"></div>
-	
-	<div id="login-options">
-
-		<% if logged_in? %>
-		<!-- 		link_to "Sign In", login_path %> |
-				link_to "Sign Up", signup_path %> -->
-
-			Welcome, <%= current_user.username %>! | 
-			<%= link_to "Logout", logout_path %>
-
-		<% else %>
-		  <a href="/login">Sign In</a> | 
-		  <a href="/signup">Sign Up</a>
-
-		<% end %>
-	</div>
-
-	<div id="site-name"><a href="/">Stardust Reviews</a></div>
-
-	<div class="navbar">
-		<a href="/movies">ALL MOVIES </a> | <a href="#"> ALL REVIEWS</a>
-	</div>
-	<div id="navbar-line"></div>
-
-	<%= yield %>
-	<div id="bottombar"></div>
->>>>>>> origin/master
 </body>
 </html>
