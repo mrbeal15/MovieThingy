@@ -8,6 +8,14 @@
     <li><img src="http://lorempixel.com/580/250/nature/2"></li>
   </ul>
 </div>
-</div>
-</div>
+
+<div class="top-reviews">
+	<% @top_reviews.each do |rev| %>
+		
+		<div class="indiv-top-review">
+			<h2><%= rev.movie.title %></h2>
+			<p><%= rev.content %></p>
+		</div>
+
+	<% end %>
 </div>

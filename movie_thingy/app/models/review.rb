@@ -5,18 +5,15 @@ class Review < ActiveRecord::Base
   has_many :comments
 
   def review_average_rating
-    # user = User.find_by(id: :user_id)
-    # user_reviews = current_user.reviews
     sum = []
-    user = self.user
-    user.reviews.last.ratings.each do |rate|
+    self.ratings.each do |rate|
       sum << rate.rating
     end
-    total = sum.reduce(:+)
+
     if sum.length == 0
-      return 'Currently no ratings'
+      return 0
     else
-      return total / sum.length
+      return (sum.reduce(:+)) / sum.length
     end
   end
 
