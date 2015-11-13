@@ -8,7 +8,7 @@ feature "User signing up" do
     expect(page).to have_content 'Register'
   end
 
-  scenario "User can create new user" do
+  scenario "User can create new user with vaild credentials" do
     user_number = User.all.count
     visit '/signup'
     fill_in 'user[username]', with: 'Salt7900'
