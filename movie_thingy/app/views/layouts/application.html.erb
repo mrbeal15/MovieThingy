@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Stardust Reviews</title>
+  <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -9,20 +11,32 @@
 </head>
 <body>
 
-  <!-- if @user && session[:user_id] -->
+  
 <nav>
- <div class="nav-wrapper">
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-       <li><a href="/login">Sign In</a> </li>
-       <li> <a href="/signup">Sign Up</a></li>
-       <li><a href="/movies">ALL MOVIES </a>
-       </li> <li><a href="/reviews"> ALL REVIEWS</a></li>
-      </ul>
+
+  <div class="nav-wrapper">
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+  	<% if logged_in? %>
+  		<li>Welcome, <%= session[:current_user_id] %>!</li>
+
+  	<% else %>
+      <li><a href="/login">Sign In</a></li>
+      <li><a href="/signup">Sign Up</a></li>
+      <li><a href="/movies">ALL MOVIES</a></li> 
+      <li><a href="/reviews">ALL REVIEWS</a></li>
+    
+    <% end %>
+    </ul>
   </div>
- </nav>
-  <div class="container">
-    <div class="row"><a href="/" class="col s12 black-text center"><h4>Stardust Reviews</h4></a></div>
+</nav>
+
+<div class="container">
+  <div class="row">
+  	<a href="/" class="col s12 black-text center">
+  		<h1>Stardust Reviews</h1>
+  	</a>
   </div>
+</div>
 
 
   <%= yield %>
