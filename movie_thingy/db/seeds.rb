@@ -203,6 +203,7 @@ Movie.create(
   title_photo_updated_at: nil
 )
 
+
 Movie.create(
 genre_id: 2,
 title: "The Wolf of Wall Street",
@@ -371,3 +372,4 @@ Movie.create(
  title_photo_file_size: nil,
  title_photo_updated_at: nil
 )
+
