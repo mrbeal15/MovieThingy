@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MovieThingy</title>
+  <title>Stardust Reviews</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="page-wrapper">
 
 	<div class="topbar"></div>
 	
 	<div id="login-options">
 
-		<% if @user && session[:current_user_id] %>
+		<% if logged_in? %>
 		<!-- 		link_to "Sign In", login_path %> |
 				link_to "Sign Up", signup_path %> -->
 
-			Welcome, <%= @user.username %>! | 
-			<!-- <a href="/logout">Logout</a> -->
+			Welcome, <%= current_user.username %>! | 
 			<%= link_to "Logout", logout_path %>
 
 		<% else %>
