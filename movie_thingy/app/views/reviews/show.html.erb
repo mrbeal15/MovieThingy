@@ -7,7 +7,6 @@
 
 <p> What did you think of this? </p>
 <%= render 'rating' %>
-<%= form_tag
 
 
 <p> <% if @review.photo_1.file? %>
@@ -25,3 +24,9 @@
 <% if @review.photo_5.file? %>
   <%= image_tag @review.photo_5.url(:medium) %>
 <% end %></p>
+
+<%= form_tag("", method: "post") do %>
+  <%= label_tag(:comment, "Content") %>
+  <%= text_field_tag(:comment) %>
+<%= submit_tag("Leave Comment") %>
+<% end %>
