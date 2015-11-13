@@ -8,15 +8,15 @@ class PagesController < ApplicationController
 
 	  @movies = Movie.all
 
-		@movies.each do |m|
-			if m.reviews != nil
-				m.reviews.each do |r|
-					total += r.overall_effect
-				end
-				avg = total/m.reviews.count
-				m.avg_score = avg
-			end
-		end
+		# @movies.each do |m|
+		# 	if m.reviews != nil
+		# 		m.reviews.each do |r|
+		# 			total += r.overall_effect
+		# 		end
+		# 		avg = total/m.reviews.count
+		# 		m.avg_score = avg
+		# 	end
+		# end
 
 		@top_movies = @movies.order('avg_score desc')[0..2]
 	end
