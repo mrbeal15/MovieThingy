@@ -24,7 +24,7 @@ Genre.create(name: "Romance")
 Genre.create(name: "Science Fiction")
 Genre.create(name: "Thriller")
 
-20.times{ Review.create(
+90.times{ Review.create(
       content: Faker::Lorem.paragraph,
       user_id: rand(2..10),
       movie_id: rand(1..12),
