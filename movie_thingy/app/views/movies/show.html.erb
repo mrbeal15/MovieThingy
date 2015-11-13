@@ -6,5 +6,4 @@
 
 <% @movie.reviews.each do |rev| %>
   <h3><a href="/movies/<%=@movie.id%>/reviews/<%= rev.id %>"><%= rev.title %></a></h3>
-
 <% end %>
