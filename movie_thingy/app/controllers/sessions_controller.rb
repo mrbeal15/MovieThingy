@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 	# post '/login'
 	def create
 		@user = User.find_by(email: params[:email])
-		if @user && @user.authenticate()
+		if @user && @user.authenticate(params[:password])
 			session[:current_user_id] = @user.id
 			redirect_to "/"
 		else
