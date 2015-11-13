@@ -6,8 +6,8 @@
 
 		  <h1> <%= link_to mov.title, movie_path(mov) %> </h1>
 
-		  <h2> Directed by: <%= mov.director %> </h2>
-		  <h4> <%= mov.release_year %>, <%= mov.mppa_rating %>, <%= mov.runtime %> mins. </h4>
+		  <h4> Directed by: <%= mov.director %> </h4>
+		  <h5> <%= mov.release_year %>, <%= mov.mppa_rating %>, <%= mov.runtime %> mins. </h5>
 		  <p> Cast: <%= mov.cast %> </p>
 		  <p> <%= image_tag mov.title_photo.url(:small) %>
 		<% end  %>
