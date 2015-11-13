@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
     get '/logout' => 'sessions#destroy'
     get '/reviews' => 'reviews#index'
+
+    post '/movies/:movie_id/reviews/:id/comments' => 'comments#create'
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
