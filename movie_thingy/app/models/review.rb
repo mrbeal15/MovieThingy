@@ -13,8 +13,11 @@ class Review < ActiveRecord::Base
       sum << rate.rating
     end
     total = sum.reduce(:+)
-    average = total / sum.length
-    return average
+    if sum.length == 0
+      return 'Currently no ratings'
+    else
+      return total / sum.length
+    end
   end
 
   has_attached_file :photo_1,
