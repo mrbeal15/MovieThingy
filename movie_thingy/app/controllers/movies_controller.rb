@@ -7,6 +7,8 @@ class MoviesController < ApplicationController
   end
 
   def show
+    @movie = Movie.find(params[:id])
+    @reviews = @movie.reviews
   end
 
   def new
@@ -15,7 +17,7 @@ class MoviesController < ApplicationController
 
 	def create
     @movie = Movie.create( movie_params )
-    redirect_to '/'
+    redirect_to "/movies/#{@movie.id}"
   end
 
   def edit

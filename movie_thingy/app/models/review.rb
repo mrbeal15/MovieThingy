@@ -4,7 +4,6 @@ class Review < ActiveRecord::Base
   has_many :ratings, :as => :rateable
   has_many :comments
 
-
   def review_average_rating
     sum = []
     self.ratings.each do |rate|
