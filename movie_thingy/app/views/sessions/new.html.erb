@@ -3,12 +3,6 @@
 
   <%= @error if @error %>
 
-  <%= form_for @user, url: login_path, input_html: {:class => "border-bottom box-shadow grey darken-4"} do |f| %>
-    <%= f.label "Email" %>
-    <%= f.text_field :email %>
-    <%= f.label "Password" %>
-    <%= f.password_field :password %>
-    <%= f.submit "Log in" %>
-  <% end %>
+  
 
 </div>
