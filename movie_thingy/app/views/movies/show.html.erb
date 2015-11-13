@@ -1,0 +1,34 @@
+
+<div class="movie-container">
+  
+  <h1 class="movie-title"> <%= @movie.title %> </h1>
+  <p class="movie-title-large"> <%= image_tag @movie.title_photo.url(:large) %> </p>
+  <h2> Directed by: <%= @movie.director %> </h2>
+  <h4> <%= @movie.release_year %>, <%= @movie.mppa_rating %>, <%= @movie.runtime %> mins. </h4>
+  <p> Cast: <%= @movie.cast %> </p>
+
+  <h2 id="review-header">Reviews</h2>
+
+  <p>
+		<% if logged_in? %>
+		  <a href="/movies/<%= @movie.id %>/reviews/new">Create a new review for this film </a>
+		<% end %>
+  </p>
+
+  <% if @reviews %>
+	  <% @reviews.each do |rev| %>
+	  	<p class="movie-review">
+	  		<h3><a href="/movies/<%=@movie.id%>/reviews/<%= rev.id %>"><%= rev.title %></a></h3>
+	  		<ul><%= rev.user.username %> says: </u>
+	  		<ul><%= rev.content %></ul>
+	  		<ul> Score: <%= rev.score %></ul>
+	  		<ul> Photography: <%= rev.photography %></ul>
+	  		<ul> Directing: <%= rev.directing %></ul>
+	  		<ul> Cast: <%= rev.cast %></ul>
+	  		<ul> Overall Effect: <%= rev.overall_effect %></ul>
+	  	</p>
+	  <% end %>
+	<% else %>
+		<h3>Be the first to reivew!</h3>
+	<% end %>
+</div>

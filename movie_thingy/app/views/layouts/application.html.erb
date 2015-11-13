@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MovieThingy</title>
+  <title>Stardust Reviews</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-	<!-- if @user && session[:user_id] -->
+<body class="page-wrapper">
 
 	<div class="topbar"></div>
-
+	
 	<div id="login-options">
-<!-- 		link_to "Sign In", login_path %> |
-		link_to "Sign Up", signup_path %> -->
- <a href="/login">Sign In</a> | <a href="/signup">Sign Up</a>
+
+		<% if logged_in? %>
+		<!-- 		link_to "Sign In", login_path %> |
+				link_to "Sign Up", signup_path %> -->
+
+			Welcome, <%= current_user.username %>! | 
+			<%= link_to "Logout", logout_path %>
+
+		<% else %>
+		  <a href="/login">Sign In</a> | 
+		  <a href="/signup">Sign Up</a>
+
+		<% end %>
 	</div>
 
 	<div id="site-name"><a href="/">Stardust Reviews</a></div>

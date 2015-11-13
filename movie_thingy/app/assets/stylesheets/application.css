@@ -55,6 +55,16 @@ html {
 a {
 }
 
+.movie-title-large {
+	text-align: center;
+	margin: auto;
+}
+
+.movie-title {
+	text-align: center;
+	zoom: 1.4;
+}
+
 #login-options {
 	float: right;
 	background-color: white;
@@ -98,4 +108,25 @@ a {
 
 .movie-list {
 	padding-left: 2em;
+}
+
+.movie-list a {
+	text-decoration: none;
+	color: #141311;
+}
+
+.movie-review {
+	border-bottom: 1px solid;
+	width: 35%;
+	text-align: center;
+	margin: auto;
+	padding: 23px;
+}
+
+#review-header {
+	text-align: center;
+	margin: auto;
+	width: 55%;
+	border-bottom: 3px solid #A2482E;
+	padding: 17px;
 }
