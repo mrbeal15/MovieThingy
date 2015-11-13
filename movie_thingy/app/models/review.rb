@@ -5,16 +5,16 @@ class Review < ActiveRecord::Base
   has_many :comments
 
   def review_average_rating
-    # user = User.find_by(id: :user_id)
-    # user_reviews = current_user.reviews
     sum = []
-    user = self.user
-    user.reviews.last.ratings.each do |rate|
+    self.ratings.each do |rate|
       sum << rate.rating
     end
-    total = sum.reduce(:+)
-    average = total / sum.length
-    return average
+
+    if sum.length == 0
+      return 0
+    else
+      return (sum.reduce(:+)) / sum.length
+    end
   end
 
   has_attached_file :photo_1,
