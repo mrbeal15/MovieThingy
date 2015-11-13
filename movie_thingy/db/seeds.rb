@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-                      { Movie.create(
+                      Movie.create(
                         genre_id: 2,
                         title: "The Wolf of Wall Street",
                         director: "Martin Scorsese",
@@ -18,9 +18,9 @@
                         title_photo_content_type: nil,
                         title_photo_file_size: nil,
                         title_photo_updated_at: nil
-                        )}
+                        )
 
-                        { Movie.create(
+                        Movie.create(
                           genre_id: 8,
                           title: "The Great Gatsby",
                           director: "Jack Clayton",
@@ -32,9 +32,9 @@
                           title_photo_content_type: nil,
                           title_photo_file_size: nil,
                           title_photo_updated_at: nil
-                          )}
+                          )
 
-                          { Movie.create(
+                          Movie.create(
                             genre_id: 3,
                             title: "The Great Gatsby",
                             director: "Baz Luhrmann",
@@ -46,9 +46,9 @@
                             title_photo_content_type: nil,
                             title_photo_file_size: nil,
                             title_photo_updated_at: nil
-                            )}
+                            )
 
-                            { Movie.create(
+                            Movie.create(
                              genre_id: 3,
                              title: "The Great Gatsby",
                              director: "Baz Luhrmann",
@@ -60,9 +60,9 @@
                              title_photo_content_type: nil,
                              title_photo_file_size: nil,
                              title_photo_updated_at: nil
-                             )}
+                             )
 
-                            { Movie.create(
+                            Movie.create(
                               genre_id: 8,
                               title: "Titanic",
                               director: "James Cameron",
@@ -74,9 +74,9 @@
                               title_photo_content_type: nil,
                               title_photo_file_size: nil,
                               title_photo_updated_at: nil
-                              )}
+                              )
 
-                              { Movie.create(
+                              Movie.create(
                                 genre_id: 8,
                                 title: "Titanic",
                                 director: "James Cameron",
@@ -88,9 +88,9 @@
                                 title_photo_content_type: nil,
                                 title_photo_file_size: nil,
                                 title_photo_updated_at: nil
-                                )}
+                                )
 
-                                { Movie.create(
+                                Movie.create(
                                   genre_id: 11,
                                   title: "Shutter Island",
                                   director: "Martin Scorsese",
@@ -102,9 +102,9 @@
                                   title_photo_content_type: nil,
                                   title_photo_file_size: nil,
                                   title_photo_updated_at: nil
-                                  )}
+                                  )
 
-                                  { Movie.create(
+                                  Movie.create(
                                     genre_id: 11,
                                     title: "Shutter Island",
                                     director: "Martin Scorsese",
@@ -116,9 +116,9 @@
                                     title_photo_content_type: nil,
                                     title_photo_file_size: nil,
                                     title_photo_updated_at: nil
-                                    )}
+                                    )
 
-                                    { Movie.create(
+                                    Movie.create(
                                       genre_id: 10,
                                       title: "Inception",
                                       director: "Christopher Nolan",
@@ -130,9 +130,9 @@
                                       title_photo_content_type: nil,
                                       title_photo_file_size: nil,
                                       title_photo_updated_at: nil
-                                      )}
+                                      )
 
-                                      { Movie.create(
+                                       Movie.create(
                                         genre_id: 10,
                                         title: "Inception",
                                         director: "Christopher Nolan",
@@ -144,9 +144,9 @@
                                         title_photo_content_type: nil,
                                         title_photo_file_size: nil,
                                         title_photo_updated_at: nil
-                                        )}
+                                        )
 
-                                      { Movie.create(
+                                       Movie.create(
                                         genre_id: 13,
                                         title: "Django Unchained",
                                         director: "Quentin Tarantino",
@@ -158,18 +158,18 @@
                                         title_photo_content_type: nil,
                                         title_photo_file_size: nil,
                                         title_photo_updated_at: nil
-                                        )}
+                                        )
 
-                                       { Movie.create(
+                                        Movie.create(
                                          genre_id: 1,
                                          title: "The Man in the Iron Mask",
                                          director: "Randall Wallace",
                                          release_year: 1998,
                                          runtime: 132,
                                          mppa_rating: "PG-13",
-                                         ast: "Leonardo DiCaprio, Jeremy Irons, John Malkovich",
+                                         cast: "Leonardo DiCaprio, Jeremy Irons, John Malkovich",
                                          title_photo_file_name: nil,
                                          title_photo_content_type: nil,
                                          title_photo_file_size: nil,
                                          title_photo_updated_at: nil
-                                         )}
+                                         )
