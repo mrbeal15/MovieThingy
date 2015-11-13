@@ -7,8 +7,8 @@ feature "User writing review" do
   movie.save
     review_number = Review.all.count
     visit '/login'
-    fill_in 'email', with: 'bnfallon@yahoo.com'
-    fill_in 'password', with: 'password'
+    find('#user_email').set 'bnfallon@yahoo.com'
+    find('#user_password').set 'password'
     click_button 'Log in'
     visit "/movies/#{movie.id}/reviews/new"
     fill_in 'review[title]', with: "This was awesome"

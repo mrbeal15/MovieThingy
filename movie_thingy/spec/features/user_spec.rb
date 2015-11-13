@@ -31,16 +31,16 @@ feature "User logging in" do
 
   scenario "User can log in" do
     visit '/login'
-    fill_in 'email', with: 'bnfallon@yahoo.com'
-    fill_in 'password', with: 'password'
-    click_button 'Log in'
+    fill_in 'user[email]', with: "bnfallon@yahoo.com"
+    fill_in "user[password]", with: "password"
+    click_button "Log in"
     expect(page).to have_content 'Salt7800'
   end
 
   scenario "Can't login with invalid credentials" do
     visit '/login'
-    fill_in 'email', with: 'Hi!'
-    fill_in 'password', with: 'password'
+    fill_in 'user[email]', with: 'Hi!'
+    fill_in 'user[password]', with: 'password'
     click_button 'Log in'
     expect(page).to have_content 'Invalid credentials'
   end
@@ -49,8 +49,8 @@ end
 feature "User logging out" do
   scenario "User can logout" do
     visit '/login'
-    fill_in 'email', with: 'bnfallon@yahoo.com'
-    fill_in 'password', with: 'password'
+    fill_in 'user[email]', with: 'bnfallon@yahoo.com'
+    fill_in 'user[password]', with: 'password'
     click_button 'Log in'
     click_link 'Logout'
     expect(page).to have_content 'Sign In | Sign Up'
