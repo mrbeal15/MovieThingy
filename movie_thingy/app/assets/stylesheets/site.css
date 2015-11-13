@@ -1,6 +1,8 @@
-  html {
-    font-family: Poiret One, serif;
-  }
+html {
+  font-family: Poiret One, serif;
+  background-color: #EEEEEE;
+}
+
 .indicator-item.active{
-background-color: #212121;
+	background-color: #212121;
 }

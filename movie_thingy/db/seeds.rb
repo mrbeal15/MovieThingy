@@ -3,7 +3,7 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+#   cities = City.create([ name: 'Chicago' ,  name: 'Copenhagen' ])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 10.times{ User.create(
@@ -370,4 +370,4 @@ Movie.create(
  title_photo_file_size: nil,
  title_photo_updated_at: nil
 )
->>>>>>> Stashed changes
+
