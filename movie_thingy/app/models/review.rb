@@ -4,7 +4,6 @@ class Review < ActiveRecord::Base
   has_many :ratings, :as => :rateable
   has_many :comments
 
-
   def review_average_rating
     # user = User.find_by(id: :user_id)
     # user_reviews = current_user.reviews
@@ -78,6 +77,5 @@ class Review < ActiveRecord::Base
       validates_attachment_content_type :photo_3, content_type: /\Aimage\/.*\Z/
       validates_attachment_content_type :photo_4, content_type: /\Aimage\/.*\Z/
       validates_attachment_content_type :photo_5, content_type: /\Aimage\/.*\Z/
->>>>>>> 31e59dbc4283be0a7f9d8d81c0041bcfd5604fe6
 
 end
