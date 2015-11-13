@@ -5,16 +5,20 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :ratings, :as => :rateable
 
+
   def trusted?
     sum = 0
     self.reviews.each do |review|
       next if review.review_average_rating == 0
       sum += review.review_average_rating
     end
-    if sum / (self.reviews.length) < 4
-      return sum / self.reviews.length
+    if sum == 0
+      return "User currently has no rated reviews"
+    elsif sum / (self.reviews.length) < 4
+      self.trusted_user = false
     else
       self.trusted_user = true
+      return "Trusted User"
     end
   end
 end

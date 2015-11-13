@@ -20,6 +20,7 @@ title_photo_file_size: nil,
 title_photo_updated_at: nil
 )
 
+
 Movie.create(
 genre_id: 8,
 title: "The Great Gatsby",
