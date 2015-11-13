@@ -17,7 +17,7 @@ class ReviewsController < ApplicationController
   def create
     @review = @movie.reviews.new(review_params)
     @review.save
-    redirect to root_path
+    redirect_to "/movies/#{@movie.id}"
   end
 
   def edit
