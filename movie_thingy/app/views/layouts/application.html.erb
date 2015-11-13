@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Stardust Reviews</title>
+  <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -9,15 +11,17 @@
 </head>
 <body>
 
-  <!-- if @user && session[:user_id] -->
+  
 <nav>
- <div class="nav-wrapper">
+  <div class="nav-wrapper">
+  	<% if logged_in? %>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-       <li><a href="/login">Sign In</a> </li>
-       <li> <a href="/signup">Sign Up</a></li>
-       <li><a href="/movies">ALL MOVIES </a>
-       </li> <li><a href="#"> ALL REVIEWS</a></li>
+        <li><a href="/login">Sign In</a></li>
+        <li><a href="/signup">Sign Up</a></li>
+        <li><a href="/movies">ALL MOVIES</a></li> 
+        <li><a href="/reviews">ALL REVIEWS</a></li>
       </ul>
+    <% end %>
   </div>
  </nav>
   <div class="container">
