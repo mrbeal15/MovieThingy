@@ -10,7 +10,7 @@ feature "User writing review" do
     fill_in 'email', with: 'bnfallon@yahoo.com'
     fill_in 'password', with: 'password'
     click_button 'Log in'
-    visit '/movies/1/reviews/new'
+    visit "/movies/#{movie.id}/reviews/new"
     fill_in 'review[title]', with: "This was awesome"
     fill_in 'review[content]', with: "This was awesome"
     fill_in 'review[photography]', with: 5
