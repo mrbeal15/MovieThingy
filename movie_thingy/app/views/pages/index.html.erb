@@ -3,18 +3,30 @@
     <div class='col l6 offset-l3'>
       <div class="slider">
   <ul class="slides">
-    <li><img src="http://lorempixel.com/580/250/nature/4"></li>
-    <li><img src="http://lorempixel.com/580/250/nature/3"></li>
-    <li><img src="http://lorempixel.com/580/250/nature/2"></li>
+
+  	<% @top_movies.each do |mov| %>
+    	<li>
+    		<a href="/movies/<%= mov.id %>"><%= image_tag mov.title_photo.url %>"></a>
+    	</li>
+
+
+    <% end %>
+
   </ul>
+
 </div>
 
-<div class="top-reviews">
+<div class="top-reviews container row">
 	<% @top_reviews.each do |rev| %>
 		
-		<div class="indiv-top-review">
-			<h2><%= rev.movie.title %></h2>
-			<p><%= rev.content %></p>
+		<div class="indiv-top-review col s6">
+			<div class="top-review-movie-title">
+				<a href="/movies/<%= rev.movie.id %>"><%= rev.movie.title %></a>
+			</div>
+
+			<div class="top-review-content">
+				<%= rev.content %>
+			</div>
 		</div>
 
 	<% end %>
